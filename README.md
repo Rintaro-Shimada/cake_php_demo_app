@@ -51,7 +51,7 @@ http://localhost/
 
 ## DB 接続方法
 
-docker-compose で mysql サーバーも建っているかと思うので `app/cake/cms/config/app_local.php` 上のDB 接続情報を上書き
+docker-compose で mysql サーバーも建っているかと思うので `/nginx/cms/config/app_local.php` 上のDB 接続情報を上書き
 
 ```
     'username' => 'cake',
@@ -62,6 +62,6 @@ docker-compose で mysql サーバーも建っているかと思うので `app/c
 こうすれば、接続できます！
 
 ## このシステムのバージョン
-PHP Version 5.6.40
-CakePHP 3.9.8 Red Velvet
-mysql: 5.7
+PHP Version 5.6.40  
+CakePHP 3.9.8 Red Velvet  
+mysql: 5.  

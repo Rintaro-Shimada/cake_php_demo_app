@@ -1,4 +1,4 @@
-# cakePHP docker 環境
+# cakePHP 3 docker 環境
 
 これは、cakePHP をdocker環境で構築するためのものです。
 
@@ -29,38 +29,25 @@ docker の状況を確認
 sudo docker ps
 ```
 
-cake_php コンテナの中に入る
+php_fpm_56 コンテナの中に入る
 
 ```bash
-sudo docker exec -it cake_php bash
-```
-
-そうすると、このディレクトリ（/var/www/html/cake ）にいると思うのでここで
-
-```bash
-curl -s https://getcomposer.org/installer | php
+sudo docker exec -it php_fpm_56 bash
 ```
 
 そのあと
 
 ```bash
-php composer.phar create-project --prefer-dist cakephp/app:4.* cms
+composer.phar create-project --prefer-dist cakephp/app:^3.9 cms
 ```
 
 * `cms` のところを変えるとプロジェクトのディレクトリが変更可能
 
-ホストの切り替え
-
-```hosts
-127.0.0.1 cms.cake.com
-```
-
 ## 表示確認
+ローカルホストで確認
+http://localhost/
 
-http://cms.cake.com/
-
-これでデフォルトページが見れたら OK  
-注意 ローカルホストでは見れません！
+これでデフォルトページが見れたら OK
 
 ## DB 接続方法
 
@@ -75,7 +62,6 @@ docker-compose で mysql サーバーも建っているかと思うので `app/c
 こうすれば、接続できます！
 
 ## このシステムのバージョン
-php:　7.3.27  
-cake: 4.2.4 Strawberry
-
-mysql: 5.6
+PHP Version 5.6.40
+CakePHP 3.9.8 Red Velvet
+mysql: 5.7

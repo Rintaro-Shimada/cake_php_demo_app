@@ -71,7 +71,7 @@ fabric.properties
 .idea/caches/build_file_checksums.ser
 
 # cake 内部を無効
-./nginx/*
+./nginx/**/*
 
 # mysql も無効
-./mysql/*
+./mysql/**/*

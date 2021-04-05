@@ -64,4 +64,4 @@ docker-compose で mysql サーバーも建っているかと思うので `/ngin
 ## このシステムのバージョン
 PHP Version 5.6.40  
 CakePHP 3.9.8 Red Velvet  
-mysql: 5.  
+mysql: 5.6  
